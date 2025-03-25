@@ -1,79 +1,57 @@
-#📂 Organizador de Arquivos com Python
+# 🗂 Organizador de Arquivos em Python
+Este script organiza automaticamente os arquivos da sua área de trabalho, separando-os em pastas de acordo com suas extensões.  
+```markdown
 
-Este script organiza automaticamente os arquivos da sua Área de Trabalho, movendo-os para pastas específicas com base em suas extensões.
 
-🛠️ Funcionalidades
+## 🚀 Como funciona?
+1. O script verifica todos os arquivos na sua **Área de Trabalho**.
+2. Identifica a **extensão** de cada arquivo.
+3. Move os arquivos para pastas correspondentes, como `Imagens`, `Documentos`, `Vídeos`, etc.
+4. Cria as pastas caso ainda não existam.
 
-✅ Identifica arquivos por extensão
-✅ Move arquivos para pastas organizadas (Imagens, Documentos, Vídeos, etc.)
-✅ Cria as pastas automaticamente, caso não existam
-✅ Funciona com Windows + OneDrive
-✅ Tratamento de erros para evitar falhas inesperadas
+## 📌 Pré-requisitos
+- Ter o **Python 3** instalado na máquina.
+- Biblioteca padrão `shutil` e `os` (já vem com Python).
 
-🚀 Como Usar
+## 📥 Instalação
+1. **Baixe o arquivo** [`app.py`](./app.py) ou copie o código do script.
+2. Salve o arquivo em qualquer pasta do seu computador.
 
-1️⃣ Instale o Python
+## ▶ Como executar?
+1. **Abra o terminal/cmd** no local do arquivo.
+2. Execute o script com:
 
-Se ainda não tem o Python instalado, baixe-o aqui.
+   ```bash
+   python app.py
+   ```
 
-2️⃣ Baixe o Script
+3. A organização será feita automaticamente! 🎉
 
-Salve o arquivo organizador.py no seu computador.
+## 📂 Categorias de Arquivos
+O script organiza arquivos nestas categorias:
+- **Imagens** → `.jpg`, `.png`, `.gif`, etc.
+- **Documentos** → `.pdf`, `.docx`, `.txt`, `.xlsx`, etc.
+- **Vídeos** → `.mp4`, `.avi`, `.mkv`, etc.
+- **Áudio** → `.mp3`, `.wav`, `.ogg`, etc.
+- **Compactados** → `.zip`, `.rar`, `.7z`, etc.
+- **Executáveis** → `.exe`, `.msi`, `.bat`
+- **Códigos** → `.py`, `.java`, `.cpp`, `.js`, `.html`, `.css`
 
-3️⃣ Execute o Script
+Se precisar adicionar mais extensões, edite o dicionário `file_categories` no código.
 
-Abra o terminal (cmd ou PowerShell) e vá até a pasta onde salvou o script:
+## 🛠 Personalização
+Se sua área de trabalho estiver em um local diferente, edite esta linha no código:
+```python
+desktop = os.path.join(os.path.expanduser("~"), "OneDrive - SESIMS", "Área de Trabalho")
+```
+Mude `"OneDrive - SESIMS"` para `"Desktop"` caso use a área de trabalho normal.
 
-cd "C:\Users\SEU_USUARIO\Caminho\Para\O\Script"
+## 📝 Notas
+- O script **não deleta** arquivos, apenas os move para as pastas organizadas.
+- Arquivos sem extensão não serão movidos.
 
-Agora execute o script:
+## 🤖 Autor
+Criado por **Victor Hugo**. 🚀
+```
 
-python organizador.py
-
-📁 Estrutura das Pastas
-
-O script organiza os arquivos em pastas na Área de Trabalho, como:
-
-Área de Trabalho
-│-- Imagens
-│-- Documentos
-│-- Vídeos
-│-- Áudio
-│-- Compactados
-│-- Executáveis
-│-- Códigos
-
-📌 Extensões Suportadas
-
-Imagens: .jpg, .jpeg, .png, .gif, .bmp, .svg
-
-Documentos: .pdf, .docx, .txt, .xlsx, .pptx, .csv
-
-Vídeos: .mp4, .avi, .mkv, .mov
-
-Áudio: .mp3, .wav, .aac, .ogg
-
-Compactados: .zip, .rar, .7z
-
-Executáveis: .exe, .msi, .bat
-
-Códigos: .py, .java, .cpp, .js, .html, .css
-
-🔧 Personalização
-
-Se quiser adicionar novas extensões, edite o dicionário file_categories no código e adicione as extensões desejadas.
-
-❌ Possíveis Problemas
-
-O script não moveu os arquivos → Verifique se os nomes das pastas estão corretos
-
-Erro de permissão → Tente rodar o script como Administrador
-
-Caminho errado da área de trabalho → Atualize a variável desktop no código
-
-📌 Autor
-
-Victor Hugo Ribeiro dos Santos Azambuja Prim
-
-Se tiver dúvidas ou sugestões, me avise! 🚀
-
+Basta salvar esse conteúdo em um arquivo **README.md** na mesma pasta do seu script. Se precisar de ajustes, me avise! 😊
