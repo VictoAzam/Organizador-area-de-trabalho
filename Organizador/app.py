@@ -2,7 +2,7 @@ import os
 import shutil
 
 # Obtém o caminho correto da área de trabalho
-desktop = os.path.join(os.path.expanduser("~"), "OneDrive - SESIMS", "Área de Trabalho")
+desktop = os.path.join(os.path.expanduser("~"), "????????", "Área de Trabalho")
 
 # Definição de categorias de arquivos
 file_categories = {
